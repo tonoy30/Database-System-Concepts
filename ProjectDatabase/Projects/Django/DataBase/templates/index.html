@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<h1>Hi I'm Tonoy😍😍😍😍😍</h1>
+<div>
+    <h3>Doctor Form</h3>
+    <form>
+        {% csrf_token %}
+        {{ doctor.as_p }}
+        <input type="submit">
+    </form>
+</div>
+
+<div>
+    <h3>Test Form</h3>
+    <form>
+        {% csrf_token %}
+        {{ test.as_p }}
+    </form>
+</div>
+<div>
+    <h3>Patient Form</h3>
+    <form>
+        {% csrf_token %}
+        {{ patient.as_p }}
+    </form>
+</div>
+<div>
+    <h3>Worker Form</h3>
+    <form>
+        {% csrf_token %}
+        {{ worker.as_p }}
+    </form>
+</div>
+{% endblock %}
